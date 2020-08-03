@@ -1,3 +1,3 @@
 # BMI Calculator
  
-Just a BMI Calculator program
+A simple BMI Calculator program
