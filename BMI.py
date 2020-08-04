@@ -1,3 +1,4 @@
+#BMI calculate function
 def bmi(name, height, weight):
     bmi = weight / (height ** 2)
     print("BMI: ", bmi)
@@ -10,9 +11,10 @@ def bmi(name, height, weight):
     elif bmi > 30:
         print(name + " is Obesity")
 
+#input
 n = input("Enter your name: ")
 w = float(input("Enter your weight: "))
 h = float(input("Enter your height: "))
-
+#output
 bmi(n, h, w)
 
