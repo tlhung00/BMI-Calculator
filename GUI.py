@@ -24,14 +24,12 @@ weightLabel = Label(root, text="Weight in kg")
 weightLabel.pack()
 w = Entry(root, textvariable=weight_v, width=10, borderwidth=5)
 w.pack()
-#weight = w.get()
 
 #Height input
 heightLabel = Label(root, text="Height in m")
 heightLabel.pack()
 h = Entry(root, textvariable=height_v, width=10, borderwidth=5)
 h.pack()
-#height = float(h.get())
 
 #Calculate button
 calc = Button(root, text="Calculate", command=bmi)
