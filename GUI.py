@@ -1,6 +1,8 @@
 from tkinter import *
+from tkinter import messagebox
 
 root = Tk()
+root.title("BMI Calculator")
 
 #Variables
 global weight
@@ -10,24 +12,24 @@ height_v = IntVar()
 
 #BMI calculate function
 def bmi():
-    weight = w.get()
-    height = h.get()
-    bmi = (weight / ((height ** 2) / 1000))
+    weight = float(w.get())
+    height = float(h.get())
+    bmi = weight / (height ** 2)
     messagebox.showinfo("Result", f"Your bmi is: {bmi}")
 
 #Input
 
 #Weight input
-weightLabel = Label(root, text="Weight")
+weightLabel = Label(root, text="Weight in kg")
 weightLabel.pack()
-w = Entry(root, textvariable=weight_v, width=30, borderwidth=5, bg="green")
+w = Entry(root, textvariable=weight_v, width=10, borderwidth=5)
 w.pack()
 #weight = w.get()
 
 #Height input
-heightLabel = Label(root, text="Height")
+heightLabel = Label(root, text="Height in m")
 heightLabel.pack()
-h = Entry(root, textvariable=height_v, width=30, borderwidth=5, bg="green")
+h = Entry(root, textvariable=height_v, width=10, borderwidth=5)
 h.pack()
 #height = float(h.get())
 
@@ -35,5 +37,5 @@ h.pack()
 calc = Button(root, text="Calculate", command=bmi)
 calc.pack()
 
-root.title("BMI Calculator")
+
 root.mainloop()
